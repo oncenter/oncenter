@@ -2,59 +2,81 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OnCenter - Medicina Estética</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">OnCenter</div>
+  <header class="header">
+    <div class="logo">OnCenter</div>
+    <nav class="nav">
       <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#tratamientos">Tratamientos</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
     </nav>
   </header>
 
-  <section id="inicio" class="hero">
-    <h1>Bienvenido a OnCenter</h1>
-    <p>Especialistas en medicina estética</p>
-  </section>
+  <main>
+    <section class="hero">
+      <h1>Los mejores equipos de medicina estética avanzada</h1>
+      <p>Cambiando tu piel desde 2025.</p>
+      <!-- Aquí podés poner un banner o imagen de fondo si querés -->
+    </section>
 
-  <section id="tratamientos" class="catalogo">
-    <h2>Tratamientos</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="img/tratamiento1.jpg" alt="Tratamiento 1" />
-        <h3>Limpieza Facial</h3>
-        <p>Revitaliza tu piel con nuestro tratamiento facial profundo.</p>
-        <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20un%20turno%20para%20una%20limpieza%20facial" class="btn">Reservar</a>
+    <section id="productos" class="catalog">
+      <h2>Productos destacados</h2>
+      <div class="cards">
+        <!-- Tarjeta de ejemplo: duplicá para agregar más -->
+        <div class="card">
+          <img src="img/equipo1.jpg" alt="Equipo 1" />
+          <h3>Elix</h3>
+          <p>Contracciones musculares intensas + radiofrecuencia sincronizada.</p>
+          <a href="https://wa.me/549XXXXXXXXXX?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Elix" class="btn" target="_blank" rel="noopener">Conocer + Cotizar</a>
+        </div>
+        <!-- Agregá más tarjetas igual que esta -->
       </div>
-      <!-- Puedes duplicar esto para más tratamientos -->
-    </div>
-  </section>
+    </section>
 
-  <section id="nosotros" class="nosotros">
-    <h2>Sobre OnCenter</h2>
-    <p>Somos un centro especializado en medicina estética con tecnología de vanguardia y atención personalizada.</p>
-  </section>
+    <section class="info">
+      <div class="info-item">
+        <h2>Somos fabricantes</h2>
+        <p>+50 años liderando la fabricación de equipos de estética.</p>
+      </div>
+      <div class="info-item">
+        <h2>Te capacitamos</h2>
+        <p>Conferencias: 882 · Tutoriales: 145 · Estudios: 84 · Ebooks: 32</p>
+      </div>
+    </section>
 
-  <section id="contacto" class="contacto">
-    <h2>Contacto</h2>
-    <p>Para reservas o consultas, escribinos directamente al WhatsApp.</p>
-    <a href="https://wa.me/549XXXXXXXXXX" class="btn">Chatear ahora</a>
-  </section>
+    <section id="nosotros" class="nosotros">
+      <h2>Nosotros</h2>
+      <p>OnCenter es un centro especializado en medicina estética con tecnología de vanguardia y formación continua.</p>
+      <!-- Pone aquí más info o imágenes -->
+    </section>
 
-  <!-- WhatsApp Flotante -->
-  <a href="https://wa.me/549XXXXXXXXXX" class="whatsapp-float" target="_blank">
-    <img src="img/whatsapp-icon.png" alt="WhatsApp">
+    <section id="contacto" class="contacto">
+      <h2>Contáctanos</h2>
+      <p>Casa matriz: Córdoba Capital | Sucursal: CABA</p>
+      <p>Tel: +54 9XXXXXXXXXX · Email: info@oncenter.com</p>
+      <a href="https://wa.me/549XXXXXXXXXX" class="btn" target="_blank" rel="noopener">Chatear ahora</a>
+    </section>
+  </main>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/549XXXXXXXXXX" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat por WhatsApp">
+    <img src="img/whatsapp-icon.png" alt="WhatsApp" />
   </a>
 
   <footer>
     <p>&copy; 2025 OnCenter. Todos los derechos reservados.</p>
   </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
