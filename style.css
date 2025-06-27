@@ -207,3 +207,31 @@ body {
 }
 
 .contacto p
+
+/* Instagram flotante */
+.instagram-float {
+  position: fixed;
+  bottom: 110px; /* un poco más arriba que WhatsApp */
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  z-index: 10000;
+  cursor: pointer;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instagram-float img {
+  width: 32px;
+  height: 32px;
+}
+
+.instagram-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
