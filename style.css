@@ -15,18 +15,37 @@ body {
   line-height: 1.6;
 }
 
+/* Video fondo */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* queda detrás de todo */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* oscurece un poco para mejor lectura */
+}
+
 /* HEADER */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #000;
+  background: transparent; /* transparente para ver video detrás */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  z-index: 1000;
+  z-index: 10;
   border-bottom: 2px solid #FFD700;
+  color: #FFD700;
 }
 
 .logo {
@@ -62,9 +81,17 @@ body {
   cursor: pointer;
 }
 
+/* Main: agrega padding para que el contenido quede debajo del video */
+main {
+  position: relative;
+  z-index: 10;
+  padding-top: 100vh; /* para separar el contenido del video */
+  background-color: #000; /* fondo negro para el resto de la página */
+}
+
 /* HERO */
 .hero {
-  padding: 10rem 2rem 5rem;
+  padding: 5rem 2rem; /* menos padding arriba porque ya está separado */
   text-align: center;
   background: #111;
 }
@@ -249,4 +276,3 @@ body {
   width: 30px;
   height: 30px;
 }
-
