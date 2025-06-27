@@ -80,7 +80,7 @@ body {
   font-weight: 400;
 }
 
-/* CATALOGO */
+/* CATALOGO VERTICAL */
 .catalog {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -94,10 +94,13 @@ body {
   text-align: center;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 2rem;
+/* Nueva clase para apilar verticalmente */
+.cards-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .card {
