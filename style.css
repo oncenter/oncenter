@@ -181,7 +181,6 @@ main {
   background-color: #e6c200;
 }
 
-/* SECCION INFO */
 .info {
   display: flex;
   justify-content: center;
@@ -194,7 +193,22 @@ main {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   color: #FFD700;
+  flex-wrap: wrap; /* permite que los items salten de línea si no entran */
 }
+
+@media (max-width: 600px) {
+  .info {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    max-width: 100%;
+  }
+
+  .info-item p {
+    font-size: 3rem; /* tamaño de texto adaptado para móvil */
+  }
+}
+
 
 .info-item h2 {
   font-size: 2.8rem;
