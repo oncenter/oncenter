@@ -64,9 +64,9 @@ body {
 
 /* HERO */
 .hero {
-  padding: 10rem 2rem 5rem; /* top padding para compensar header fijo */
+  padding: 10rem 2rem 5rem;
   text-align: center;
-  background: #111; /* Aquí podés poner fondo o banner */
+  background: #111;
 }
 
 .hero h1 {
@@ -206,73 +206,4 @@ body {
   margin-bottom: 1rem;
 }
 
-.contacto p {
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
-}
-
-/* WHATSAPP FLOTANTE */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 70px;
-  height: 70px;
-  z-index: 10000;
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0 0 15px #25D366;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: #25D366;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.whatsapp-float img {
-  width: 40px;
-  height: 40px;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px #128C7E;
-}
-
-/* FOOTER */
-footer {
-  background: #000;
-  color: #666;
-  text-align: center;
-  padding: 1rem 2rem;
-  border-top: 1px solid #222;
-  font-size: 0.9rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 70px;
-    right: -100%;
-    background: #000;
-    height: 100vh;
-    width: 250px;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem;
-    transition: right 0.3s ease;
-    z-index: 9999;
-  }
-
-  .nav-links.show {
-    right: 0;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
+.contacto p
