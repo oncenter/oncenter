@@ -8,13 +8,16 @@
   padding: 0;
 }
 
-body {
+body, html {
   font-family: 'Poppins', sans-serif;
   background-color: #000;
   color: #fff;
   line-height: 1.6;
+  overflow-x: hidden;
+  height: 100%;
 }
 
+/* Video fondo */
 .video-background {
   position: fixed;
   top: 0; left: 0;
@@ -25,18 +28,24 @@ body {
 }
 
 .video-background video {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
   object-fit: cover;
+  z-index: -1;
 }
-
 
 /* HEADER */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: transparent; /* transparente para ver video detrás */
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,17 +88,17 @@ body {
   cursor: pointer;
 }
 
-/* Main: agrega padding para que el contenido quede debajo del video */
+/* Main: espacio para no tapar header */
 main {
   position: relative;
   z-index: 10;
-  padding-top: 100vh; /* para separar el contenido del video */
-  background-color: #000; /* fondo negro para el resto de la página */
+  padding-top: 80px; /* espacio igual a header */
+  background-color: #000;
 }
 
 /* HERO */
 .hero {
-  padding: 5rem 2rem; /* menos padding arriba porque ya está separado */
+  padding: 5rem 2rem;
   text-align: center;
   background: #111;
 }
@@ -119,7 +128,6 @@ main {
   text-align: center;
 }
 
-/* Nueva clase para apilar verticalmente */
 .cards-vertical {
   display: flex;
   flex-direction: column;
@@ -173,7 +181,7 @@ main {
   background-color: #e6c200;
 }
 
-/* SECCION INFO - centro, grande y moderna */
+/* SECCION INFO */
 .info {
   display: flex;
   justify-content: center;
@@ -237,11 +245,11 @@ main {
   color: #fff;
 }
 
-/* Estilo general para íconos flotantes */
+/* Íconos flotantes */
 .whatsapp-float,
 .instagram-float {
   position: fixed;
-  right: 20px;
+  right: 25px;
   width: 55px;
   height: 55px;
   z-index: 10000;
@@ -252,6 +260,7 @@ main {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease;
+  padding: 8px;
 }
 
 .whatsapp-float:hover,
@@ -261,16 +270,27 @@ main {
 
 /* Posiciones individuales */
 .instagram-float {
-  bottom: 90px; /* arriba */
+  bottom: 90px;
 }
 
 .whatsapp-float {
-  bottom: 20px; /* abajo */
+  bottom: 20px;
 }
 
-/* Tamaño del ícono */
+/* Tamaño iconos */
 .instagram-float img,
 .whatsapp-float img {
   width: 30px;
   height: 30px;
 }
+
+/* Responsive menú */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
