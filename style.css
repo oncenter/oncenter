@@ -206,7 +206,11 @@ body {
   margin-bottom: 1rem;
 }
 
-.contacto p
+.contacto p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #fff;
+}
 
 /* Estilo general para íconos flotantes */
 .whatsapp-float,
