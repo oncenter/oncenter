@@ -1,3 +1,6 @@
+/* Import fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap');
+
 /* RESET */
 * {
   box-sizing: border-box;
@@ -61,9 +64,9 @@ body {
 
 /* HERO */
 .hero {
-  padding: 10rem 2rem 5rem; /* top padding to offset fixed header */
+  padding: 10rem 2rem 5rem; /* top padding para compensar header fijo */
   text-align: center;
-  background: #111; /* Puedes poner aquí un fondo de imagen */
+  background: #111; /* Aquí podés poner fondo o banner */
 }
 
 .hero h1 {
@@ -142,27 +145,32 @@ body {
   background-color: #e6c200;
 }
 
-/* SECCION INFO */
+/* SECCION INFO - centro, grande y moderna */
 .info {
   display: flex;
   justify-content: center;
-  gap: 4rem;
-  padding: 4rem 2rem;
+  align-items: center;
+  gap: 5rem;
+  padding: 5rem 2rem;
   background: #111;
-  flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
-}
-
-.info-item {
-  flex: 1 1 300px;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
   color: #FFD700;
 }
 
 .info-item h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.info-item p {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
 }
 
 /* NOSOTROS */
@@ -205,20 +213,27 @@ body {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   z-index: 10000;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #25D366;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #25D366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .whatsapp-float img {
-  width: 100%;
-  height: auto;
+  width: 40px;
+  height: 40px;
 }
 
 .whatsapp-float:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 25px #128C7E;
 }
 
 /* FOOTER */
