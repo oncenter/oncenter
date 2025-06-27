@@ -6,8 +6,34 @@
   <title>OnCenter - Medicina Estética</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Video de fondo */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .video-background video {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+  </style>
 </head>
 <body>
+  <!-- Video de fondo -->
+  <div class="video-background">
+    <video autoplay muted loop playsinline>
+      <source src="assets/fondo.mp4" type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+  </div>
+
   <header class="header">
     <div class="logo">OnCenter</div>
     <nav class="nav">
@@ -85,15 +111,15 @@
     </section>
   </main>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/5493519092020" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" />
-</a>
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/5493519092020" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" />
+  </a>
 
-<!-- Instagram flotante -->
-<a href="https://www.instagram.com/oncenterestetica?igsh=MXk2ajNpNmNjcjg4" class="instagram-float" target="_blank" rel="noopener" aria-label="Instagram">
-  <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
-</a>
+  <!-- Instagram flotante -->
+  <a href="https://www.instagram.com/oncenterestetica?igsh=MXk2ajNpNmNjcjg4" class="instagram-float" target="_blank" rel="noopener" aria-label="Instagram">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+  </a>
 
   <footer>
     <p>&copy; 2025 OnCenter. Todos los derechos reservados.</p>
