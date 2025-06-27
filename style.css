@@ -219,7 +219,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.3s ease;
@@ -230,19 +230,20 @@ body {
   transform: scale(1.1);
 }
 
-/* Posición específica */
-.whatsapp-float {
-  bottom: 20px;
-}
-
+/* Posiciones individuales */
 .instagram-float {
-  bottom: 90px;
+  bottom: 90px; /* arriba */
 }
 
-/* Tamaño del ícono dentro del botón */
-.whatsapp-float img,
-.instagram-float img {
+.whatsapp-float {
+  bottom: 20px; /* abajo */
+}
+
+/* Tamaño del ícono */
+.instagram-float img,
+.whatsapp-float img {
   width: 30px;
   height: 30px;
 }
+
 
