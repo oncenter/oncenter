@@ -16,32 +16,26 @@ body, html {
   height: 100%;
 }
 
-/* HEADER */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo visible */
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con transparencia para que se vea el fondo, pero sin tapar */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  z-index: 100; /* Bien alto */
-  border-bottom: 2px solid #FFD700;
+  z-index: 1000; /* aseguramos que esté encima */
+  border-bottom: 2px solid #FFD700; /* línea dorada abajo */
   color: #FFD700;
 }
-
 
 .logo {
   font-weight: 700;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #FFD700;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+  /* Si querés que el logo esté siempre visible y un poco destacado */
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
 }
 
 .nav-links li a {
@@ -55,6 +49,7 @@ body, html {
 .nav-links li a:focus {
   color: #fff;
 }
+
 
 .menu-toggle {
   display: none;
