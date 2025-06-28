@@ -21,15 +21,16 @@ body, html {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo visible */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  z-index: 10;
+  z-index: 100; /* Bien alto */
   border-bottom: 2px solid #FFD700;
   color: #FFD700;
 }
+
 
 .logo {
   font-weight: 700;
@@ -67,10 +68,11 @@ body, html {
 /* MAIN */
 main {
   position: relative;
-  z-index: 10;
-  padding-top: 100px;
+  z-index: 1;
+  padding-top: 90px; /* altura suficiente para el header */
   background-color: #000;
 }
+
 
 /* HERO */
 .hero {
