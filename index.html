@@ -1,111 +1,297 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OnCenter - Medicina Estética</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+/* RESET Y FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Montserrat:wght@700&display=swap');
 
-  <!-- Encabezado -->
-  <header class="header">
-    <div class="logo">
-      <img src="logo.png" alt="Logo OnCenter" style="height: 50px;" />
-    </div>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="#tratamientos">Tratamientos</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-    </nav>
-  </header>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <main>
-    <section class="hero">
-      <h1>Los mejores equipos de medicina estética avanzada</h1>
-      <p>Cambiando tu piel desde 2025.</p>
-    </section>
+body, html {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff; /* fondo blanco */
+  color: #000; /* texto negro */
+  line-height: 1.6;
+  overflow-x: hidden;
+  height: 100%;
+}
 
-    <section id="tratamientos" class="catalog">
-      <h2>Tratamientos</h2>
-      <div class="cards-vertical">
-        <!-- Tarjeta 1 -->
-        <div class="card">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-9Rmih__cynm-ZV5ynieaz0bSgak16EaqOw&s" alt="Depilación definitiva con Coolite Evo" />
-          <h3>Depilación definitiva con "Coolite Evo"</h3>
-          <p>Precio: $ <!-- Agrega aquí el precio --></p>
-          <a href="https://wa.me/5493519092020?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Depilaci%C3%B3n%20definitiva%20con%20Coolite%20Evo" class="btn" target="_blank" rel="noopener">Conocer + Cotizar</a>
-        </div>
-        <!-- Tarjeta 2 -->
-        <div class="card">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Bsz3NRKEHH_Jw-ADWPV5ZpwqGaTeIXTp7Q&s" alt="Tratamientos corporales y limpiezas faciales" />
-          <h3>Tratamientos y limpiezas faciales</h3>
-          <p>Precio: $ <!-- Agrega aquí el precio --></p>
-          <a href="https://wa.me/5493519092020?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Tratamientos%20corporales%20y%20limpiezas%20faciales" class="btn" target="_blank" rel="noopener">Conocer + Cotizar</a>
-        </div>
-        <!-- Tarjeta 3 -->
-        <div class="card">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjnUhf65F0tCyrpRjcwaMsRRT-cBk5vRh1w&s" alt="Cabina de colágeno" />
-          <h3>Cabina de colágeno</h3>
-          <p>Precio: $ <!-- Agrega aquí el precio --></p>
-          <a href="https://wa.me/5493519092020?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Cabina%20de%20col%C3%A1geno" class="btn" target="_blank" rel="noopener">Conocer + Cotizar</a>
-        </div>
-        <!-- Tarjeta 4 (última imagen con tamaño adaptable) -->
-        <div class="card">
-          <img class="responsive-img" src="https://biosistemas.com.uy/wp-content/uploads/2023/08/DSC_0108-2.png" alt="Descripción del tratamiento" />
-          <h3>Tratamiento Corporales</h3>
-          <p>Precio: $ <!-- precio aquí --></p>
-          <a href="ENLACE_DE_WHATSAPP" class="btn" target="_blank" rel="noopener">Conocer + Cotizar</a>
-        </div>
-      </div>
-    </section>
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(249, 249, 249, 0.95); /* fondo claro semi-transparente */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  border-bottom: 2px solid #000; /* línea negra */
+  color: #000;
+}
 
-    <section class="info">
-      <div class="info-item">
-        <h2>Tratamientos</h2>
-        <p>+100</p>
-      </div>
-      <div class="info-item">
-        <h2>Clientes</h2>
-        <p>+50</p>
-      </div>
-      <div class="info-item">
-        <h2>Años de experiencia</h2>
-        <p>+10</p>
-      </div>
-    </section>
+/* Logo con altura fija */
+.logo img {
+  height: 50px;
+  object-fit: contain;
+}
 
-    <section id="nosotros" class="nosotros">
-      <h2>Nosotros</h2>
-      <p>OnCenter es un centro especializado en medicina estética con tecnología de vanguardia y formación continua.</p>
-    </section>
+.nav-links li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-    <section id="contacto" class="contacto">
-      <h2>Contáctanos</h2>
-      <p>Ubicación: Emilio Lamarca 4320, Urca, Córdoba</p>
-      <p>Tel: +54 3519092020 · Email: <a href="mailto:oncenter.estetica@gmail.com" class="email-link">oncenter.estetica@gmail.com</a></p>
-      <a href="https://wa.me/5493519092020" class="btn" target="_blank" rel="noopener">Chatear ahora</a>
-    </section>
-  </main>
+.nav-links li a:hover,
+.nav-links li a:focus {
+  color: #555;
+}
 
-  <!-- WhatsApp flotante -->
-  <a href="https://wa.me/5493519092020" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" />
-  </a>
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}
 
-  <!-- Instagram flotante -->
-  <a href="https://www.instagram.com/oncenterestetica?igsh=MXk2ajNpNmNjcjg4" class="instagram-float" target="_blank" rel="noopener" aria-label="Instagram">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
-  </a>
+/* MAIN */
+main {
+  position: relative;
+  z-index: 1;
+  padding-top: 90px;
+  background-color: #fff;
+}
 
-  <footer>
-    <p>&copy; 2025 OnCenter. Todos los derechos reservados.</p>
-  </footer>
+/* HERO */
+.hero {
+  padding: 5rem 2rem;
+  background: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
-  <script src="scripts.js"></script>
-</body>
-</html>
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: #000;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  color: #222;
+}
+
+/* CATALOGO */
+.catalog {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.catalog h2 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.cards-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Imágenes de productos: adaptables y no muy grandes */
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+/* Imagen específica para tratamiento corporales (última) */
+.card img.responsive-img {
+  max-width: 100%;
+  max-height: 300px;  /* límite de altura para que no se vea gigante */
+  width: auto;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  display: block;
+  object-fit: contain;
+}
+
+.card h3 {
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #333;
+}
+
+/* INFO */
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .info {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    max-width: 100%;
+  }
+
+  .info-item p {
+    font-size: 3rem;
+  }
+}
+
+.info-item h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.info-item p {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+}
+
+/* NOSOTROS */
+.nosotros {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+}
+
+.nosotros h2 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* CONTACTO */
+.contacto {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+  text-align: center;
+  background: #eaeaea;
+}
+
+.contacto h2 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contacto p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+/* ÍCONOS flotantes */
+.whatsapp-float,
+.instagram-float {
+  position: fixed;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  padding: 8px;
+}
+
+.whatsapp-float:hover,
+.instagram-float:hover {
+  transform: scale(1.1);
+}
+
+.instagram-float {
+  bottom: 90px;
+}
+
+.whatsapp-float {
+  bottom: 20px;
+}
+
+.instagram-float img,
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
+}
+
+/* RESPONSIVE NAV */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
