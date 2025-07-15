@@ -31,7 +31,9 @@ body, html {
 }
 
 .logo img {
-  height: 50px;
+  height: 80px;       /* altura del logo (ajusta este valor) */
+  max-height: 80px;   /* para que no crezca más del header */
+  width: auto;        /* para mantener proporción */
   object-fit: contain;
 }
 
