@@ -31,7 +31,6 @@ body, html {
   color: #000;
 }
 
-
 .logo img {
   height: 100px;       /* altura del logo (ajusta este valor) */
   max-height: 100px;   /* para que no crezca más del header */
@@ -268,6 +267,7 @@ main {
   height: 30px;
 }
 
+/* RESPONSIVE NAV */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -279,14 +279,12 @@ main {
 
   /* Ajustes header y logo para móvil */
   .header {
-    height: 60px;          /* Reducir altura del header */
-    padding: 0.3rem 1rem;  /* Reducir espacio interno */
+    height: 60px;
+    padding: 0.3rem 1rem;
   }
 
   .logo img {
-    height: 50px;          /* Reducir tamaño del logo */
+    height: 50px;
     max-height: 50px;
   }
 }
-
-
