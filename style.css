@@ -268,7 +268,6 @@ main {
   height: 30px;
 }
 
-/* RESPONSIVE NAV */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -276,6 +275,17 @@ main {
 
   .menu-toggle {
     display: block;
+  }
+
+  /* Ajustes header y logo para móvil */
+  .header {
+    height: 60px;          /* Reducir altura del header */
+    padding: 0.3rem 1rem;  /* Reducir espacio interno */
+  }
+
+  .logo img {
+    height: 50px;          /* Reducir tamaño del logo */
+    max-height: 50px;
   }
 }
 
