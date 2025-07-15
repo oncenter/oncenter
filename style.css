@@ -20,15 +20,17 @@ body, html {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95); /* fondo blanco semi-transparente */
+  background-color: rgba(255, 255, 255, 0.95);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;  /* menos espacio arriba y abajo */
+  height: 80px;          /* altura fija para el header */
   z-index: 1000;
-  border-bottom: 2px solid #000; /* línea negra */
+  border-bottom: 2px solid #000;
   color: #000;
 }
+
 
 .logo img {
   height: 80px;       /* altura del logo (ajusta este valor) */
